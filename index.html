@@ -1,0 +1,264 @@
+<style>
+body {
+  background-color:#fff;
+  font-family:Open Sans, Arial, sans-serif;
+  font-weight:300;
+  font-size: 12px;
+  margin: 5em;}
+
+#container {
+  background:#eee;
+  height:200px;
+  width:50vw;
+}
+
+.link {
+  color:#fff;
+  text-transform: lowercase;
+  font-size:12px;
+}
+
+.link:hover {
+  color: #222;
+}
+
+p {
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  text-align:center;
+}
+
+#footer {
+  background: #00bcd4;
+  height:290px;
+  width:50vw;
+}
+
+.light {
+  color: #fff;
+  font-size: 30px;
+}
+
+
+h1, h2 {
+  color:#333;
+  margin: 0 auto;
+  font-family: 'Roboto Condensed', Arial, sans-serif;
+  text-align: center;
+}
+
+#subtitle {
+  font-size:20px;
+}
+
+#name {
+  font-size: 40px;
+}
+
+#social-icons {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  margin-top: 85px;
+}
+
+#social-icons li {
+  -webkit-transition: box-shadow 0.2s ease;
+  -moz-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  color: #ffb600;
+  display: inline-block;
+  font-size: .7em;
+  height: 8em;
+  margin: 0 1em 1em;
+  position: relative;
+  text-align: center;
+  text-transform: lowercase;
+  width: 8em;
+  line-height: 8em;
+}
+#social-icons li a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 30px;
+  color: #fff;
+  text-decoration: none;
+}
+#social-icons li:hover {
+  box-shadow: 0 0 0 7px #fff;
+}
+#social-icons li:hover:before {
+  -webkit-transform: scale(0.925);
+  -moz-transform: scale(0.925);
+  -ms-transform: scale(0.925);
+  -o-transform: scale(0.925);
+  transform: scale(0.925);
+  box-shadow: 0 0 0 1px #fff;
+  opacity: .5;
+}
+#social-icons li:before {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  bottom: 0;
+  box-shadow: 0 0 0 1px #fff;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+} 
+
+.circle-container {
+	position: relative;
+	perspective: 1000;	
+	margin: 0 auto;
+   margin-top: 30px;
+}
+		
+.circle-container:hover .circle {
+	transform: rotate3d(45, 45, 0, 180deg);
+}
+		
+.circle-container:hover .outer-ring {
+	transform: rotate3d(45, 0, 0, 180deg);
+}
+
+.circle-container:hover .outer-outer-ring {
+	transform: rotate3d(0, 45, 0, 180deg);
+}
+		
+.circle-container, .front, .back {
+	width: 175px;
+	height: 175px;
+	background-color: rgba(0,0,0,0);
+}
+		
+.circle, .outer-ring, .outer-outer-ring {
+	transition: 0.5s;
+	transform-style: preserve-3d;
+	transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+		
+.circle {
+	position: relative;
+	width: 175px;
+	height: 175px;
+}
+		
+.front, .back {
+	border-radius: 50%;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+		
+.front {
+	background-color: #fff;
+	z-index: 2;
+}
+		
+.front p {
+	margin-top: 1.2em;
+	font-family: cabin, sans-serif;
+	font-weight: 700;
+	font-size: 3em;
+	text-align: center;
+	color: #c02227;
+}
+		
+.back {
+	transform: rotate3d(45,45,0,180deg);
+	background-color: #fff;
+}
+		
+.back-logo {
+	width: 60%;
+	display: block;
+	margin: 2em auto;
+}
+
+.front-profile {
+	width: 100%;
+	display: block;
+	margin:  auto;
+  border-radius: 50%;
+}
+		
+.outer-ring {
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	width: 191px;
+	height: 191px;
+	background-color: rgba(255,255,255,0);
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+
+.outer-outer-ring {
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	width: 211px;
+	height: 211px;
+	background-color: rgba(255,255,255,0);
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
+
+</style>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+<div id="container">
+  <h1 id="name">Younus Ali Akash</h1>
+  <h2 id="subtitle">Web Developer</h2>
+ 
+  <div class="circle-container">
+	<div class="outer-ring"></div>
+	<div class="circle">
+		<div class="front">
+		  <img class ="front-profile" src="akash.png" />
+		</div>
+		<div class="back">
+			<img class="back-logo" src="https://i.imgur.com/jenmcH0.png" />
+		</div>
+	</div>
+  </div>
+  
+</div>
+<div id="footer">
+  <h1 class="light">-</h1> 
+    <ul id="social-icons">
+      <li>
+        <a class="" href="#">g+</a>
+      </li>
+      <li>
+        <a class="" href="#">f</a>
+      </li>
+      <li>
+        <a class="" href="#">in</a>
+      </li>
+      <li>
+        <a class="" href="#">t</a>
+      </li>
+    </ul>
+  <div id="gray">
+  <p>Email: <a class="link" href="#">younusaliakash8@gmail.com</a></p>
+  <p>Phone: +880 1750 954 875</p>
+  <p>Natore Sadar, Rajshahi, Bangladesh</p>
+  </div>
+</div>
